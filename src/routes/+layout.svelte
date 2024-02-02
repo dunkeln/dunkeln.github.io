@@ -11,8 +11,11 @@
         <a href="{base}/projects">projects</a>
     </nav>
 </header>
+
 <main>
     <slot></slot>
 </main>
+
 <footer>
+    add links here
 </footer>
