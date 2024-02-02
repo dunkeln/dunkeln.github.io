@@ -1,4 +1,2 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-this is the site not that
+Student rn getting my foot in the door, looking for internships
+i'll put my picture n shit later
