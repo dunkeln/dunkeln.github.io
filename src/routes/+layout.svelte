@@ -1,38 +1,35 @@
-<<<<<<< HEAD
-<header>
-    <h4><a href="/">dunkeln.github.io</a></h4>
-
-    <nav>
-        <a href="/about">about</a>
-        <a href="/posts">posts</a>
-        <a href="/projects">projects</a>
-    </nav>
-</header>
-<main>
-    <slot></slot>
-</main>
-<footer>
-</footer>
-=======
 <script lang="ts">
     import { base } from '$app/paths';
+    import '$lib/app.css';
+    import LinkedIn from '$lib/icons/linkedin.svg?raw';
 </script>
 
-<header>
-    <h4><a href="{base}">dunkeln.github.io</a></h4>
+<div id="app">
+    <header>
+        <h2><a href="{base}">dunkeln.github.io</a></h2>
 
-    <nav>
-        <a href="{base}/about">about</a>
-        <a href="{base}">posts</a>
-        <a href="{base}/projects">projects</a>
-    </nav>
-</header>
+        <nav>
+            <a href="{base}/about">about</a>
+            <a href="{base}">posts</a>
+            <a href="{base}/projects">projects</a>
+        </nav>
+    </header>
 
-<main>
-    <slot></slot>
-</main>
+    <main>
+        <slot></slot>
+    </main>
 
-<footer>
-    add links here
-</footer>
->>>>>>> temp
+    <footer>
+        {@html LinkedIn}
+    </footer>
+</div>
+
+<style>
+    h2 {
+        font-family: 'Gamja Flower', sans-serif;
+    }
+
+    :global(svg) {
+        width: 2.2rem;
+    }
+</style>
