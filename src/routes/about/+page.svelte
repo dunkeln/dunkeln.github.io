@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Profile from '$lib/final-photo.gif';
+    import Profile from '/final-photo.gif';
     import Experience from './Experience.svelte';
 </script>
 
