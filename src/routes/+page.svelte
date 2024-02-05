@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Profile from '/final-photo.gif';
     import { base } from '$app/paths';
 
     function handleEmail() {
@@ -10,7 +9,7 @@
 <div class="container">
     <div class="wobble-border img-div">
         <div class="wobble-border img-div" style="background: orange;">
-            <img src={Profile} alt="" class="wobble-border">
+            <img src="{base}/final-photo.gif" alt="" class="wobble-border">
         </div>
     </div>
 

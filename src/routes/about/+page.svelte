@@ -1,12 +1,12 @@
 <script lang="ts">
-    import Profile from '/final-photo.gif';
     import Experience from './Experience.svelte';
+    import { base } from '$app/paths';
 </script>
 
 <div class="container">
     <div class="wobble-border img-div">
         <div class="wobble-border img-div" style="background: orange;">
-            <img src={Profile} alt="" class="wobble-border">
+            <img src="{base}/final-photo.gif" alt="" class="wobble-border">
         </div>
     </div>
 
