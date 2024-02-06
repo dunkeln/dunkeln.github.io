@@ -1,59 +1,34 @@
 <script lang="ts">
-    import Experience from './Experience.svelte';
-    import { base } from '$app/paths';
+    import Xp from '$lib/components/Xp.svelte';
+    import Template from '$lib/components/Template.svelte';
+    import exp from './log';
 </script>
 
-<div class="container">
-    <div class="wobble-border img-div">
-        <div class="wobble-border img-div" style="background: orange;">
-            <img src="{base}/final-photo.gif" alt="" class="wobble-border">
-        </div>
+<Template>
+    <div id="chronology" style="text-align: left; overflow: scroll;">
+        <ul>
+            {#each exp as x}
+                <Xp {...x}/>
+            {/each}
+        </ul>
     </div>
-
-    <div style="text-align: left;">
-        <Experience title={"Masters at Stevens"}/>
-        <Experience title={"Research Internship at IIT"}/>
-        <Experience title={"Core Member @DSC, Google"}/>
-        <Experience title={"IT Intern at Diyar, Kuwait"}/>
-        <Experience title={"BTech. from NIT, Surat"}/>
-    </div>
-</div>
+</Template>
 
 <style>
-    .container {
-        padding: 3rem;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+    #chronology {
+        max-width: 60%;
+        min-width: 60%;
+        max-height: 80vh;
+        overflow-y: scroll;
     }
 
-    img {
-        width: 13.9rem;
-        padding: 0;
-        border: 3px solid white;
+    ul {
+        border-left: 3px dotted black;
+        padding: 0rem;
+        list-style-type: none;
     }
 
-    .img-div {
-        border: 3px solid black;
-        display: flex;
-        width: 14rem;
-    }
-
-    .wobble-border {
-        border-radius: 250px 750px 250px 750px /
-                     750px 250px 750px 250px;
-        animation: wobble 3s ease-in-out alternate infinite;
-    }
-
-    @keyframes wobble {
-      50% {
-        border-radius: 750px 550px 350px 750px /
-                       350px 750px 550px 450px;
-      }
-      100% {
-        border-radius: 750px 250px 750px 250px /
-                       250px 750px 250px 750px;
-      }
+    #chronology::-webkit-scrollbar {
+        display: none;
     }
 </style>

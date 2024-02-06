@@ -1,18 +1,10 @@
 <script lang="ts">
     import { base } from '$app/paths';
-
-    function handleEmail() {
-        navigator.clipboard.writeText("prateekpravanjan@gmail.com");
-    }
+    import { copy } from 'svelte-copy';
+    import Template from '$lib/components/Template.svelte';
 </script>
 
-<div class="container">
-    <div class="wobble-border img-div">
-        <div class="wobble-border img-div" style="background: orange;">
-            <img src="{base}/final-photo.gif" alt="" class="wobble-border">
-        </div>
-    </div>
-
+<Template>
     <div style="text-align: left;">
         <span id="hero-intro">
             Hi, I am <span id="intro">Dunkeln, otw!</span>
@@ -22,61 +14,28 @@
         a Grad Student from Stevens Institute of Technology, NJ, USA.<br/>
         Studying Masters of Science in Applied AI.<br/>
         Foundations in NLP, Genetic AI and leaning towards becomign more holistic.<br/>
-        Rust advocate and hobbyist programmer on the side.<br/>
+        Plugged to music 24x7, rust advocate and hobbyist programmer.<br/>
         Learn more in the<a href="{base}/about">about</a>page<br/><br/><br/>
         💼 <span style="background: white;">Looking for Summer Internship  in AI and Machine Learning!!</span><br/><br/>
         </em>
 
         <div style="text-align: center;">
-            <button on:click={handleEmail}> GET IN TOUCH </button>
+            <button 
+                use:copy={"prateekpravanjan@gmail.com"}
+                on:svelte-copy={(_) => alert("email copied to clipboard")}>
+                GET IN TOUCH
+            </button>
         </div>
     </div>
-</div>
+</Template>
 
 <style>
-    .container {
-        padding: 3rem;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
     button {
         border: 3px solid black;
         color: inherit;
         font-family: inherit;
         padding: 1rem 3rem 1rem 3rem;
         background: transparent;
-    }
-
-    img {
-        width: 15.9rem;
-        padding: 0;
-        border: 3px solid white;
-    }
-
-    .img-div {
-        border: 3px solid black;
-        display: flex;
-        width: 17rem;
-    }
-
-    .wobble-border {
-        border-radius: 250px 750px 250px 750px /
-                     750px 250px 750px 250px;
-        animation: wobble 3s ease-in-out alternate infinite;
-    }
-
-    @keyframes wobble {
-      50% {
-        border-radius: 750px 550px 350px 750px /
-                       350px 750px 550px 450px;
-      }
-      100% {
-        border-radius: 750px 250px 750px 250px /
-                       250px 750px 250px 750px;
-      }
     }
 
     #hero-intro {
