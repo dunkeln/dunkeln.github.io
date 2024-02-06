@@ -20,11 +20,12 @@
         min-width: 60%;
         max-height: 80vh;
         overflow-y: scroll;
+        scroll-behavior: smooth;
     }
 
     ul {
         border-left: 3px dotted black;
-        padding: 0rem;
+        padding: 0.4rem;
         list-style-type: none;
     }
 

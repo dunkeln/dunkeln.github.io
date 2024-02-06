@@ -3,7 +3,7 @@
 </script>
 
 <div class="container">
-    <div class="wobble-border img-div">
+    <div id="outermost" class="wobble-border img-div">
         <div class="wobble-border img-div" style="background: orange;">
             <img src="{base}/final-photo.gif" alt="" class="wobble-border">
         </div>
@@ -18,6 +18,10 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    #outermost {
+        box-shadow: -2px 1px 10px 2px #5b4e4e;
     }
 
     img {

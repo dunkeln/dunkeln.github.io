@@ -24,7 +24,8 @@
 <style>
     li {
         position: relative;
-        padding-left: 20px; /* Adjust according to your preference */
+        padding-left: 0; /* Adjust according to your preference */
+        margin-left: 0;
     }
 
     li::before {
@@ -40,7 +41,6 @@
     }
 
     div {
-        background: #ed550c;
         border: 2px solid black;
         border-radius: .3rem;
         margin: 2rem;

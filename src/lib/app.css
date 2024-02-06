@@ -1,5 +1,6 @@
 :root {
-    --bg-clr: #c96442;
+    /* --bg-clr: #c96442; */
+    --bg-clr: #f3dddd;
     --font-clr: black;
 }
 
@@ -41,6 +42,7 @@ body::-webkit-scrollbar {
     padding: 0;
     border: 1px solid black;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 header {
