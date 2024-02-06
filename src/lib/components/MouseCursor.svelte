@@ -26,10 +26,10 @@
 		coords1.set({ x: e.clientX, y: e.clientY })
 		coords2.set({ x: e.clientX, y: e.clientY })
 	}}
-	on:mousedown={(e) => {
+	on:mousedown={(_) => {
 		size.set(30);
 	}}
-	on:mouseup={(e) => {
+	on:mouseup={(_) => {
 		size.set(10);
 	}}
 />
@@ -60,5 +60,7 @@
 		left: 0;
 		pointer-events: none;
         z-index: 100;
+        padding: 0;
+        margin: 0;
 	}
 </style>
