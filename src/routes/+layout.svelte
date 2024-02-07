@@ -13,10 +13,9 @@
 <div id="app">
     <header>
         <h2><a href="{base}">dunkeln.github.io</a></h2>
-
         <nav>
             <a href="{base}/about">about</a>
-            <a href="{base}/posts">projects</a>
+            <a href="{base}/posts">posts</a>
             <a href="{base}/projects">projects</a>
         </nav>
     </header>

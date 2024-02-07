@@ -4,10 +4,11 @@
     export let start = "2024-02-05";
     export let end = "2024-02-05";
     export let zidx = 0; // 1 > 0
+
+    import { TimelineItem } from 'flowbite-svelte';
 </script>
 
-<li>
-    <div>
+<TimelineItem {title} date={start + " to " + end}>
         <h5><em>{start} to {end}</em></h5>
         {#if zidx === 0}
             <h4 style="text-decoration: none;">{title}</h4>
@@ -17,8 +18,7 @@
         <details open={true}>
             {desc}
         </details>
-    </div>
-</li>
+</TimelineItem>
 
 
 <style>

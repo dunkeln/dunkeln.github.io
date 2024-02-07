@@ -895,6 +895,11 @@ svelte-preprocess@^5.1.0:
     sorcery "^0.11.0"
     strip-indent "^3.0.0"
 
+svelte-vertical-timeline@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-vertical-timeline/-/svelte-vertical-timeline-1.0.0.tgz#cff23b0dff2d5e3b94013a02b38fb6234596c85b"
+  integrity sha512-o//Dhy6UTk9sNS5WZ6hPalBL+DHnFozY1T6cb4vKxOEbqAFlJyCQWYtLHBcE3zIxpclx0TtBCxQayZ4fHZ2aDg==
+
 svelte@^4.2.7:
   version "4.2.9"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-4.2.9.tgz#ece982ccc5b700c27e85cdf130c0e343c195fab5"

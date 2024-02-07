@@ -7,7 +7,7 @@
 <Template>
     <div style="text-align: left;">
         <span id="hero-intro">
-            Hi, I am <span id="intro">Dunkeln, otw!</span>
+            Hi, I am Prateek! 👾
         </span>
         <br/>
         <em>
