@@ -67,10 +67,17 @@ a:hover {
 }
 
 footer {
+    position: absolute;
+    right: 0%;
+    bottom: 10%;
     height: .3rem;
     text-align: center;
     display: flex;
 	align-items: center;
-	flex-direction: row;
-    justify-content: center;
+	flex-direction: column;
+    justify-content: flex-end;
+}
+
+main {
+    min-height: 75%;
 }

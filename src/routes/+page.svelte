@@ -22,7 +22,7 @@
         <div style="text-align: center;">
             <button 
                 use:copy={"prateekpravanjan@gmail.com"}
-                on:svelte-copy={(_) => alert("email copied to clipboard")}>
+                on:svelte-copy={(_) => alert("email id copied to clipboard")}>
                 GET IN TOUCH
             </button>
         </div>

@@ -5,13 +5,14 @@
 </script>
 
 <Template>
-    <div id="chronology" style="text-align: left; overflow: scroll;">
-        <ul>
-            {#each exp as x}
-                <Xp {...x}/>
-            {/each}
-        </ul>
-    </div>
+        <h3>Experience</h3>
+        <div id="chronology" style="text-align: left; overflow: scroll;">
+            <ul>
+                {#each exp as x}
+                    <Xp {...x}/>
+                {/each}
+            </ul>
+        </div>
 </Template>
 
 <style>

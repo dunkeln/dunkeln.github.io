@@ -16,8 +16,8 @@
 
         <nav>
             <a href="{base}/about">about</a>
-            <a href="{base}/posts">projects</a>
-            <a href="{base}/projects">projects</a>
+            <a href="{base}">posts</a>
+            <a href="{base}">projects</a>
         </nav>
     </header>
 
@@ -43,14 +43,9 @@
         {@html GitHub}
     </a>
     <a 
-        href="https://linktr.ee/dunkeln"
+        href="https://www.github.com/dunkeln"
         target="_blank">
         {@html LinkTree}
-    </a>
-    <a 
-        href="https://open.spotify.com/user/prateekpravanjan?si=118f3f05421c45a7"
-        target="_blank">
-        {@html Spotify}
     </a>
 </footer>
 
