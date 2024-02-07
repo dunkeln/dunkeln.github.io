@@ -54,7 +54,7 @@
                     </TimelineItem>
                 {/each}
             </Timeline>
-            <img src="{base}/ye.png" alt="">
+            <img src="{base}/universe.webp" alt="">
         </div>
     </div>
 </Template>
