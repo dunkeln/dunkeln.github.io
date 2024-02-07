@@ -43,4 +43,5 @@
         font-size: 2rem;
         font-weight: bolder;
     }
+
 </style>

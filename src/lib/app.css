@@ -4,6 +4,12 @@
     --font-clr: black;
 }
 
+::selection {
+    color: var(--bg-clr);
+    background: black;
+}
+
+
 @font-face {
     font-family: 'styrene';
     src: url('styrene-font-family-1707064074-0/StyreneA-Medium-Trial-BF63f6cbdb24b6d.otf');
