@@ -9,7 +9,6 @@
     background: black;
 }
 
-
 @font-face {
     font-family: 'styrene';
     src: url('styrene-font-family-1707064074-0/StyreneA-Medium-Trial-BF63f6cbdb24b6d.otf');
@@ -86,4 +85,10 @@ footer {
 
 main {
     min-height: 75%;
+}
+
+@media only screen and (max-device-width: 430px) {
+    header {
+        flex-direction: column;
+    }
 }

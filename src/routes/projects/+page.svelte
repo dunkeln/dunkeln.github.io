@@ -8,7 +8,6 @@
         const resp = await fetch(`https://api.github.com/users/dunkeln/repos`);
         repos = await resp.json();
     });
-
 </script>
 
 <h3>
@@ -26,5 +25,11 @@ STILL BUILDING THIS END OF THE SITE...
     }
     img {
         width: 40rem;
+    }
+
+    @media only screen and (max-device-width: 430px) {
+        h3 {
+            word-wrap: break-word;
+        }
     }
 </style>

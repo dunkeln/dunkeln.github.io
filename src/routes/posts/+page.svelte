@@ -12,7 +12,14 @@ STILL BUILDING THIS END OF THE SITE...
         font-size: 7rem;
         font-weight: bold;
     }
+
     img {
         width: 40rem;
+    }
+
+    @media only screen and (max-device-width: 430px) {
+        h3 {
+            word-wrap: break-word;
+        }
     }
 </style>

@@ -85,4 +85,18 @@
      img {
          width: 18rem;
      }
+
+     @media only screen and (max-device-width: 430px) {
+        #icons {
+           flex-wrap: wrap; 
+        }
+        :global(#icons > svg) {
+           width: 3.7rem;
+           padding: .5rem;
+        }
+        
+        em {
+            display: none;
+        }
+     }
 </style>

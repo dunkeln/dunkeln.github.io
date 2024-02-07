@@ -52,4 +52,10 @@
                        250px 750px 250px 750px;
       }
     }
+
+    @media only screen and (max-device-width: 430px) {
+        .container {
+            flex-direction: column;
+        }
+    }
 </style>
