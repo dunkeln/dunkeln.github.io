@@ -53,8 +53,18 @@
                         </TimelineContent>
                     </TimelineItem>
                 {/each}
+                    <TimelineItem>
+                        <TimelineSeparator>
+                            <TimelineDot />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <h5>{ "13.8 billion years ago" }</h5>
+                            <h3>{"The Big Bang"}</h3>
+                        </TimelineContent>
+                    </TimelineItem>
             </Timeline>
-            <img src="{base}/universe.webp" alt="">
+            <img src="{base}/universe.png" alt="">
         </div>
     </div>
 </Template>
