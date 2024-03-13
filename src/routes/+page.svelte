@@ -13,7 +13,7 @@
         <em>
         a Grad Student from Stevens Institute of Technology, NJ, USA.<br/>
         Studying Masters of Science in Applied AI.<br/>
-        Foundations in NLP, Genetic AI and leaning towards becomign more holistic.<br/>
+        Foundations in NLP, Genetic AI and leaning towards becoming more holistic.<br/>
         Plugged to music 24x7, rust advocate and hobbyist programmer.<br/>
         Learn more in the<a href="{base}/about">about</a>page<br/><br/><br/>
         💼 <span style="background: white;">Looking for Summer Internship  in AI and Machine Learning!!</span><br/><br/>

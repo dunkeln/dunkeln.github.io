@@ -33,7 +33,8 @@
         {@html LinkedIn}
     </a>
     <a 
-        href="">
+        href="https://www.kaggle.com/dunkeln"
+        target="_blank">
         {@html Kaggle}
     </a>
     <a 
