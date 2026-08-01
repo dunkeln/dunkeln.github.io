@@ -1,17 +1,169 @@
 ---
+import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
+import activity from '../data/github-activity.json';
+import contributions from '../data/github-contributions.json';
 
+const days = contributions.days.slice(-224);
+const weeks = Array.from({ length: 32 }, (_, index) => days.slice(index * 7, index * 7 + 7));
+const recentContributionCount = days.reduce((total, day) => total + day.count, 0);
+const recentRepositories = activity.repositories.slice(0, 5);
+const relativeTime = new Intl.RelativeTimeFormat('en', { numeric: 'always', style: 'narrow' });
+const formatRelativeTime = (iso: string) => {
+	const elapsed = Math.max(0, Date.now() - new Date(iso).getTime());
+	const minute = 60_000;
+	const hour = 60 * minute;
+	const day = 24 * hour;
+	if (elapsed < hour) return relativeTime.format(-Math.max(1, Math.floor(elapsed / minute)), 'minute');
+	if (elapsed < day) return relativeTime.format(-Math.floor(elapsed / hour), 'hour');
+	return relativeTime.format(-Math.floor(elapsed / day), 'day');
+};
+const timeline = [
+	{ period: 'atm', role: 'open to full-time roles', place: '...' },
+	{ period: '2026', role: 'Contract Sr. AI Engineer', place: 'Labelbox' },
+	{ period: '2026', role: 'Volunteer AI Engineer', place: 'Community Dreams' },
+	{ period: '2025', role: 'AI Engineer', place: 'Mercor' },
+	{ period: '2023–25', role: 'M.S. Applied AI', place: 'Stevens' },
+	{ period: '2024', role: 'AI-SaaS Project Lead', place: 'Real AI Dynamics' },
+	{ period: '2020', role: 'Research Intern', place: 'IIT' },
+	{ period: '2020–21', role: 'Cybersecurity Core Team', place: 'GDSC' },
+	{ period: '2019', role: 'IT Intern', place: 'DIYAR' },
+	{ period: '2018–22', role: 'B.Tech Computer Engineering', place: 'NIT' },
+];
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Prateek Pravanjan's portfolio and technical writing." />
+		<title>dunkeln.github.io — Prateek Pravanjan</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-canvas text-ink antialiased">
+		<a class="skip-link" href="#content">Skip to content</a>
+
+		<SiteNav current="home" />
+
+		<main id="content" class="mx-auto max-w-5xl px-6 pb-24 pt-36 sm:px-10 sm:pt-40" tabindex="-1">
+			<section class="grid max-w-4xl items-start gap-8 md:grid-cols-[18rem_minmax(0,1fr)] md:gap-12">
+				<div class="profile-column">
+					<img
+						class="profile-image"
+						src="/profile.jpg"
+						alt="Prateek Pravanjan standing beside a humanoid robot"
+						width="460"
+						height="460"
+					/>
+					<nav class="profile-links" aria-label="Social links">
+						<a href="https://x.com/_dunkeln" target="_blank" rel="noreferrer" aria-label="X" title="X">
+							<svg class="icon-x" viewBox="0 0 128 128" aria-hidden="true">
+								<path d="M75.916 54.2 122.542 0h-11.05L71.008 47.06 38.672 0H1.376l48.898 71.164L1.376 128h11.05L55.18 78.303 89.328 128h37.296L75.913 54.2ZM60.782 71.79l-4.955-7.086-39.42-56.386h16.972L65.19 53.824l4.954 7.086 41.353 59.15h-16.97L60.782 71.793Z" />
+							</svg>
+						</a>
+						<a href="https://github.com/dunkeln" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+							<svg class="icon-github" viewBox="0 0 128 128" aria-hidden="true">
+								<path fill-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104Z" />
+							</svg>
+						</a>
+						<a href="https://www.linkedin.com/in/prateek-pravanjan" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+							<svg class="icon-linkedin" viewBox="0 0 128 128" aria-hidden="true">
+								<path d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42A8.91 8.91 0 0 0 12 125h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3ZM39.17 107H21.06V48.73h18.11V107Zm-9.05-66.23a10.5 10.5 0 1 1 0-21 10.5 10.5 0 0 1 0 21ZM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32Z" />
+							</svg>
+						</a>
+						<span class="email-detail">
+							<svg class="mail-icon" viewBox="3 4.5 18 15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+								<path d="M3.75 5.75h16.5v12.5H3.75z" />
+								<path d="m4.5 6.5 7.5 6 7.5-6" />
+							</svg>
+							<span>prateekpravanjan@gmail.com</span>
+						</span>
+					</nav>
+				</div>
+				<div class="max-w-xl pb-1">
+					<h1 class="text-3xl font-semibold leading-tight tracking-[-0.025em] sm:text-4xl">
+						Building production-facing layers around generative models.
+					</h1>
+					<span class="mt-5 text-ink leading-7 sm:text-lg sm:leading-8">
+						Agent runtimes, evaluation, fine-tuning, and observability to make model behavior easier to debug and ship,&nbsp;&nbsp;
+					</span>
+          <span class="text-base font-medium leading-7 text-muted">
+              alongside exploring and learning RL techniques, physical AI and voice models.
+          </span>
+          <p class="mt-2 text-sm leading-6 text-muted">
+          <strong>Recent wins</strong> in patent search and conflict resolution and physical AI orchestration in robotics at AWS Loft SF and Seeed Studio with NVIDIA and Hugging Face.
+          </p>
+					<p class="mt-4 flex items-center gap-2 text-sm text-muted">
+						<svg class="size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+							<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+							<circle cx="12" cy="10" r="2.5" />
+						</svg>
+						<span>San Francisco Bay Area</span>
+					</p>
+				</div>
+			</section>
+
+			<div class="activity-module">
+			<aside class="timeline-section" aria-labelledby="timeline-heading">
+				<h2 id="timeline-heading">Timeline</h2>
+				<ul class="timeline-list">
+					{timeline.map((item) => (
+						<li>
+							<time>{item.period}</time>
+							<span class="timeline-role">{item.role} <span class="timeline-place">@ {item.place}</span></span>
+						</li>
+					))}
+				</ul>
+			</aside>
+			<div class="github-activity-column">
+			<section class="contribution-section" aria-labelledby="github-activity">
+				<div class="contribution-header">
+					<h2 id="github-activity">GitHub activity</h2>
+					<span>
+						{recentContributionCount} contributions<span class="contribution-period"> · past 8 months</span>
+					</span>
+				</div>
+				<a
+					class="contribution-link"
+					href={`https://github.com/${contributions.username}`}
+					target="_blank"
+					rel="noreferrer"
+					aria-label={`View ${contributions.username} on GitHub — ${recentContributionCount} contributions in the past 8 months`}
+				>
+					<div class="contribution-grid" aria-hidden="true">
+						{weeks.map((week) => (
+							<div class="contribution-week">
+								{week.map((day) => (
+									<span
+										class="contribution-cell"
+										data-level={day.level}
+										title={`${day.date} · ${day.count} contribution${day.count === 1 ? '' : 's'}`}
+									></span>
+								))}
+							</div>
+						))}
+					</div>
+				</a>
+			</section>
+
+			<section class="recent-section" aria-label="Recent GitHub activity">
+				<ul class="recent-list">
+					{recentRepositories.map((repository) => (
+						<li>
+							<a href={`https://github.com/${repository.name}`} target="_blank" rel="noreferrer">
+								<span class="repository-name">{repository.name}</span>
+								<span class="repository-description" title={repository.description || undefined}>
+									{repository.description || '…'}
+								</span>
+								<time datetime={repository.createdAt}>{formatRelativeTime(repository.createdAt)}</time>
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+			</div>
+			</div>
+		</main>
 	</body>
 </html>

@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import SiteNav from '../components/SiteNav.astro';
+
+const posts = (await getCollection('writing'))
+	.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const formatDate = (date: string | Date) => new Intl.DateTimeFormat('en', {
+	month: 'short',
+	day: 'numeric',
+	year: 'numeric',
+	timeZone: 'UTC',
+}).format(new Date(date));
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Technical writing by Prateek Pravanjan." />
+		<title>Writing — Prateek Pravanjan</title>
+	</head>
+	<body class="bg-canvas text-ink antialiased">
+		<a class="skip-link" href="#content">Skip to content</a>
+
+		<SiteNav current="writing" />
+
+		<main id="content" class="mx-auto max-w-6xl px-5 pb-24 pt-32 sm:px-10 sm:pt-36" tabindex="-1">
+			<section class="writing-page" aria-labelledby="writing-heading">
+				<h1 id="writing-heading" class="sr-only">Writing</h1>
+				<p class="writing-intro">Notes on model training, agents, observability and agent architecture.</p>
+				{posts.length ? (
+					<ul class="writing-list">
+						{posts.map((post, index) => (
+							<li>
+								<a href={`/writing/${post.id}/`}>
+									<div class="writing-cover">
+										<img
+											class:list={{ 'is-contained': post.data.cover.fit === 'contain' }}
+											src={post.data.cover.src}
+											alt={post.data.cover.alt}
+											width={post.data.cover.width}
+											height={post.data.cover.height}
+											loading={index === 0 ? 'eager' : 'lazy'}
+											fetchpriority={index === 0 ? 'high' : 'auto'}
+										/>
+									</div>
+									<div class="writing-copy">
+										<time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+										<h2>{post.data.title}</h2>
+										<p>{post.data.description}</p>
+									</div>
+								</a>
+							</li>
+						))}
+					</ul>
+				) : (
+					<p class="writing-empty">Nothing published here yet.</p>
+				)}
+			</section>
+		</main>
+	</body>
+</html>

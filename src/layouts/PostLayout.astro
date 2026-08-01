@@ -1,0 +1,101 @@
+---
+import SiteNav from '../components/SiteNav.astro';
+import type { MarkdownHeading } from '@astrojs/markdown-remark';
+import 'katex/dist/katex.min.css';
+import '../styles/global.css';
+
+interface TocHeading extends MarkdownHeading {
+	html?: string;
+}
+
+interface Props {
+	title: string;
+	description: string;
+	date: Date;
+	tags?: string[];
+	headings?: TocHeading[];
+}
+
+const { title, description, date, tags = [], headings = [] } = Astro.props;
+const formattedDate = new Intl.DateTimeFormat('en', {
+	month: 'short',
+	day: 'numeric',
+	year: 'numeric',
+	timeZone: 'UTC',
+}).format(date);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title} — Prateek Pravanjan</title>
+	</head>
+	<body class="bg-canvas text-ink antialiased">
+		<a class="skip-link" href="#content">Skip to content</a>
+		<SiteNav current="writing" />
+
+		<main id="content" class="article-layout mx-auto max-w-7xl px-6 pb-24 pt-36 sm:px-10 sm:pt-40" tabindex="-1">
+			<article class="article-shell">
+				<header class="article-header">
+					<h1>{title}</h1>
+					<p class="article-description">{description}</p>
+					<div class="article-meta">
+						<time datetime={date.toISOString()}>{formattedDate}</time>
+						{tags.length > 0 && <span>{tags.join(' · ')}</span>}
+					</div>
+				</header>
+				<div class="article-prose">
+					<slot />
+				</div>
+			</article>
+			{headings.length > 0 && (
+				<nav class="article-toc" aria-label="On this page">
+					<p>On this page</p>
+					<ol>
+						{headings.map((heading, index) => (
+							<li data-depth={heading.depth}>
+								<a href={`#${heading.slug}`} aria-current={index === 0 ? 'location' : undefined} set:html={heading.html ?? heading.text}></a>
+							</li>
+						))}
+					</ol>
+				</nav>
+			)}
+		</main>
+
+		<script>
+			const links = [...document.querySelectorAll<HTMLAnchorElement>('.article-toc a')];
+			const sections = links.map((link) => document.getElementById(link.hash.slice(1))).filter(Boolean);
+			let scheduled = false;
+
+			function updateCurrentSection() {
+				let current = sections[0];
+				for (const section of sections) {
+					if (section.getBoundingClientRect().top > 140) break;
+					current = section;
+				}
+				if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = sections.at(-1);
+
+				for (const link of links) {
+					if (link.hash === `#${current?.id}`) link.setAttribute('aria-current', 'location');
+					else link.removeAttribute('aria-current');
+				}
+			}
+
+			function scheduleUpdate() {
+				if (scheduled) return;
+				scheduled = true;
+				requestAnimationFrame(() => {
+					scheduled = false;
+					updateCurrentSection();
+				});
+			}
+
+			updateCurrentSection();
+			document.addEventListener('scroll', scheduleUpdate, { passive: true });
+		</script>
+	</body>
+</html>

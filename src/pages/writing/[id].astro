@@ -1,0 +1,35 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import katex from 'katex';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('writing');
+	return posts.map((post) => ({
+		params: { id: post.id },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props as { post: CollectionEntry<'writing'> };
+const { Content, headings } = await render(post);
+const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (character) => `&#${character.charCodeAt(0)};`);
+const renderLabel = (text: string) => {
+	let html = '';
+	let offset = 0;
+	for (const match of text.matchAll(/\$([^$]+)\$/g)) {
+		html += escapeHtml(text.slice(offset, match.index));
+		html += katex.renderToString(match[1], { output: 'htmlAndMathml', throwOnError: true });
+		offset = match.index + match[0].length;
+	}
+	return html + escapeHtml(text.slice(offset));
+};
+const labels = [...post.body.matchAll(/^#{2,3}\s+(.+)$/gm)].map(([, text]) => renderLabel(text));
+const tocHeadings = headings
+	.filter(({ depth }) => depth === 2 || depth === 3)
+	.map((heading, index) => ({ ...heading, html: labels[index] }));
+---
+
+<PostLayout title={post.data.title} description={post.data.description} date={post.data.date} tags={post.data.tags} headings={tocHeadings}>
+	<Content />
+</PostLayout>

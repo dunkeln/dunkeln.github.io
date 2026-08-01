@@ -1,0 +1,280 @@
+---
+import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
+
+const projects = [
+	{
+		name: 'procdork',
+		scope: 'Governed ELT + evaluation harness',
+		image: '/assets/work/procdork.avif',
+		alt: 'Procdork interface showing a sourced supplier research session',
+		width: 1280,
+		height: 720,
+		live: 'https://procdork.vercel.app/docs',
+		repo: 'https://github.com/dunkeln/procdork',
+	},
+	{
+		name: 'Bright MCP',
+		scope: 'Agent-oriented MCP and MCP App',
+		image: '/assets/work/bright-mcp.avif',
+		alt: 'Benchmark comparing workflow completion, answer quality, and judge preference',
+		width: 1200,
+		height: 640,
+		repo: 'https://github.com/dunkeln/bright_mcp',
+	},
+	{
+		name: 'Signals',
+		scope: 'Procurement workflow observability',
+		image: '/assets/work/signals.avif',
+		alt: 'Signals procurement coordination map for a simulated supplier workflow',
+		width: 1280,
+		height: 720,
+		live: 'https://signals-ws.vercel.app/acme-base-sandbox',
+		repo: 'https://github.com/dunkeln/signals',
+	},
+	{
+		name: 'Murdock',
+		scope: 'Provenance-first legal review',
+		image: '/assets/work/murdock.avif',
+		alt: 'Murdock case workspace reviewing source documents and extracted issues',
+		width: 1600,
+		height: 1104,
+		repo: 'https://github.com/dunkeln/murdock',
+	},
+	{
+		name: 'DROID Loop',
+		scope: 'Robot failure mining & review',
+		image: '/assets/work/droid-loop.avif',
+		alt: 'DROID Loop interface reviewing a flagged robot manipulation incident',
+		width: 900,
+		height: 628,
+		live: 'https://droid-loop.dunkeln.com',
+		repo: 'https://github.com/dunkeln/droid_loop',
+	},
+	{
+		name: 'mobisim',
+		scope: 'Grounded voice + 3D inspection',
+		image: '/assets/work/mobisim.png',
+		alt: 'A semantically inspectable Audi R8 model rendered by Mobisim',
+		width: 1440,
+		height: 759,
+		live: 'https://mobisim.dunkeln.com',
+		repo: 'https://github.com/dunkeln/mobisim',
+	},
+];
+
+const skills = [
+	{
+		name: 'premortem',
+		summary: 'Pressure-test risky technical plans before rewrites, migrations, cutovers, or AI-system changes.',
+		install: 'npx skills add https://github.com/dunkeln/skills --skill premortem',
+	},
+	{
+		name: 'postmortem',
+		summary: 'RCA engineering failures into evidence-backed cause chains and fix paths, distilled from production SRE agent workflows.',
+		install: 'npx skills add https://github.com/dunkeln/skills --skill postmortem',
+	},
+	{
+		name: '4x4',
+		summary: 'Stop agents from colluding around the first plausible fix by making four lanes compete under different payoffs.',
+		install: 'npx skills add https://github.com/dunkeln/skills --skill 4x4',
+	},
+];
+
+const carouselProjects = [-1, 0, 1].flatMap((set) =>
+	projects.map((project, projectIndex) => ({ ...project, projectIndex, set, clone: set !== 0 })),
+);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Selected work by Prateek Pravanjan." />
+		<title>Work — Prateek Pravanjan</title>
+	</head>
+	<body class="bg-canvas text-ink antialiased">
+		<a class="skip-link" href="#content">Skip to content</a>
+
+		<SiteNav current="work" />
+
+		<main id="content" class="mx-auto max-w-6xl px-5 pb-24 pt-24 sm:px-10 sm:pt-28" tabindex="-1">
+			<section class="work-page" aria-labelledby="work-heading">
+				<h1 id="work-heading" class="sr-only">Work</h1>
+				<div class="work-carousel-shell">
+					<ul class="work-carousel" aria-label="Selected work" tabindex="0">
+						{carouselProjects.map((project) => {
+							const primaryUrl = project.live ?? project.repo;
+
+							return (
+							<li
+								class="work-card"
+								data-project-index={project.projectIndex}
+								data-set={project.set}
+								data-clone={project.clone ? '' : undefined}
+								data-position={project.set < 0 ? 'left' : project.set === 0 && project.projectIndex === 0 ? 'active' : 'right'}
+								aria-current={!project.clone && project.projectIndex === 0 ? 'true' : undefined}
+								aria-hidden={project.clone ? 'true' : undefined}
+								inert={project.clone ? true : undefined}
+							>
+								<a class="work-card-primary" href={primaryUrl} target="_blank" rel="noreferrer">
+									<div class="work-thumbnail">
+										<img
+											src={project.image}
+											alt={project.clone ? '' : project.alt}
+											width={project.width}
+											height={project.height}
+											loading={!project.clone && project.projectIndex === 0 ? 'eager' : 'lazy'}
+											fetchpriority={!project.clone && project.projectIndex === 0 ? 'high' : 'auto'}
+										/>
+									</div>
+									<div class="work-card-copy">
+										<h2>{project.name}</h2>
+										<span>{project.scope}</span>
+									</div>
+								</a>
+								<nav class="work-card-links" aria-label={`${project.name} links`}>
+									{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live ↗</a>}
+									<a href={project.repo} target="_blank" rel="noreferrer">Code ↗</a>
+								</nav>
+							</li>
+							);
+						})}
+					</ul>
+					<div class="work-carousel-controls">
+						<button type="button" data-carousel-previous aria-label="Previous project">←</button>
+						<button type="button" data-carousel-next aria-label="Next project">→</button>
+					</div>
+				</div>
+
+				<section class="agent-skills" aria-labelledby="skills-heading">
+					<header class="agent-skills-intro">
+						<h2 id="skills-heading">Agent skills</h2>
+						<p>Stop the slop. Give coding agents sharper operating procedures.</p>
+					</header>
+
+					<ul class="agent-skills-list">
+						{skills.map((skill) => (
+							<li>
+								<strong>{skill.name}</strong>
+								<p>{skill.summary}</p>
+								<div class="agent-skill-command">
+									<code>{skill.install}</code>
+									<button type="button" data-copy-command data-skill-name={skill.name} aria-label={`Copy ${skill.name} install command`}>
+										<svg data-copy-icon aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+											<rect x="9" y="9" width="11" height="11" rx="2"></rect>
+											<path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+										</svg>
+										<svg data-check-icon hidden aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+											<path d="m5 12 4 4L19 6"></path>
+										</svg>
+									</button>
+								</div>
+							</li>
+						))}
+					</ul>
+				</section>
+			</section>
+		</main>
+
+		<script>
+			document.querySelectorAll<HTMLButtonElement>('[data-copy-command]').forEach((button) => {
+				button.addEventListener('click', async () => {
+					const command = button.previousElementSibling?.textContent;
+					if (!command) return;
+
+					await navigator.clipboard.writeText(command);
+					button.querySelector<SVGElement>('[data-copy-icon]')!.hidden = true;
+					button.querySelector<SVGElement>('[data-check-icon]')!.hidden = false;
+					button.setAttribute('aria-label', `${button.dataset.skillName} install command copied`);
+					setTimeout(() => {
+						button.querySelector<SVGElement>('[data-copy-icon]')!.hidden = false;
+						button.querySelector<SVGElement>('[data-check-icon]')!.hidden = true;
+						button.setAttribute('aria-label', `Copy ${button.dataset.skillName} install command`);
+					}, 1400);
+				});
+			});
+
+			const carousel = document.querySelector<HTMLElement>('.work-carousel');
+			const physicalCards = [...document.querySelectorAll<HTMLElement>('.work-card')];
+			const cards = physicalCards.filter((card) => !card.hasAttribute('data-clone'));
+			const beforeClone = physicalCards.find((card) => card.dataset.set === '-1' && card.dataset.projectIndex === String(cards.length - 1))!;
+			const afterClone = physicalCards.find((card) => card.dataset.set === '1' && card.dataset.projectIndex === '0')!;
+			const previous = document.querySelector<HTMLButtonElement>('[data-carousel-previous]');
+			const next = document.querySelector<HTMLButtonElement>('[data-carousel-next]');
+			const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			let activeIndex = 0;
+
+			const syncCards = (target: HTMLElement, index: number) => {
+				activeIndex = index;
+				physicalCards.forEach((card) => {
+					card.dataset.position = card === target ? 'active' : card.offsetLeft < target.offsetLeft ? 'left' : 'right';
+					if (!card.hasAttribute('data-clone') && Number(card.dataset.projectIndex) === activeIndex) {
+						card.setAttribute('aria-current', 'true');
+					} else {
+						card.removeAttribute('aria-current');
+					}
+				});
+			};
+
+			const centerCard = (card: HTMLElement, behavior: ScrollBehavior) => {
+				carousel?.scrollTo({
+					left: card.offsetLeft - ((carousel?.clientWidth ?? 0) - card.clientWidth) / 2,
+					behavior,
+				});
+			};
+
+			const step = (direction: number) => {
+				const nextIndex = (activeIndex + direction + cards.length) % cards.length;
+				const target = activeIndex === 0 && direction < 0
+					? beforeClone
+					: activeIndex === cards.length - 1 && direction > 0
+						? afterClone
+						: cards[nextIndex];
+				syncCards(target, nextIndex);
+				centerCard(target, reduceMotion ? 'auto' : 'smooth');
+			};
+
+			previous?.addEventListener('click', () => step(-1));
+			next?.addEventListener('click', () => step(1));
+			carousel?.addEventListener('keydown', (event) => {
+				if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+				event.preventDefault();
+				const direction = getComputedStyle(carousel).direction === 'rtl' ? -1 : 1;
+				step(event.key === 'ArrowRight' ? direction : -direction);
+			});
+			carousel?.addEventListener('scrollend', () => {
+				const center = carousel.scrollLeft + carousel.clientWidth / 2;
+				const closestIndex = physicalCards.reduce((best, card, index) =>
+					Math.abs(card.offsetLeft + card.clientWidth / 2 - center) < Math.abs(physicalCards[best].offsetLeft + physicalCards[best].clientWidth / 2 - center)
+						? index
+						: best, 0);
+				const closest = physicalCards[closestIndex];
+				const index = Number(closest.dataset.projectIndex);
+
+				if (closest.hasAttribute('data-clone')) {
+					const realCard = cards[index];
+					centerCard(realCard, 'auto');
+					syncCards(realCard, index);
+				} else {
+					syncCards(closest, index);
+				}
+			}, { passive: true });
+			carousel?.addEventListener('focusin', (event) => {
+				const card = (event.target as Element).closest<HTMLElement>('.work-card');
+				if (card && !card.hasAttribute('data-clone')) {
+					const index = Number(card.dataset.projectIndex);
+					syncCards(card, index);
+					centerCard(card, reduceMotion ? 'auto' : 'smooth');
+				}
+			});
+
+			requestAnimationFrame(() => {
+				centerCard(cards[0], 'auto');
+				syncCards(cards[0], 0);
+			});
+		</script>
+	</body>
+</html>

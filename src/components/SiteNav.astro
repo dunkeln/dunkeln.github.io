@@ -1,0 +1,16 @@
+---
+interface Props {
+	current: 'home' | 'work' | 'writing';
+}
+
+const { current } = Astro.props;
+---
+
+<header class="site-header">
+	<nav class="floating-nav" aria-label="Primary navigation">
+		<a class="brand-link" href="/" aria-current={current === 'home' ? 'page' : undefined}>dunkeln.github.io</a>
+		<span class="nav-divider" aria-hidden="true"></span>
+		<a class="nav-link" href="/work/" aria-current={current === 'work' ? 'page' : undefined}>Work</a>
+		<a class="nav-link" href="/writing/" aria-current={current === 'writing' ? 'page' : undefined}>Writing</a>
+	</nav>
+</header>
