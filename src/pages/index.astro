@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SiteNav from '../components/SiteNav.astro';
+import SiteHead from '../components/SiteHead.astro';
 import activity from '../data/github-activity.json';
 import contributions from '../data/github-contributions.json';
 
@@ -30,16 +31,35 @@ const timeline = [
 	{ period: '2019', role: 'IT Intern', place: 'DIYAR' },
 	{ period: '2018–22', role: 'B.Tech Computer Engineering', place: 'NIT' },
 ];
+const description = 'Bay Area AI engineer building production-facing agent runtimes, evaluation systems, model tooling, and physical AI workflows.';
+const profileJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ProfilePage',
+	url: 'https://dunkeln.github.io/',
+	mainEntity: {
+		'@id': 'https://dunkeln.github.io/#prateek-pravanjan',
+		'@type': 'Person',
+		name: 'Prateek Pravanjan',
+		alternateName: 'dunkeln',
+		jobTitle: 'AI Engineer',
+		description,
+		image: 'https://dunkeln.github.io/profile.jpg',
+		url: 'https://dunkeln.github.io/',
+		email: 'mailto:prateekpravanjan@gmail.com',
+		homeLocation: { '@type': 'Place', name: 'San Francisco Bay Area' },
+		knowsAbout: ['Agent systems', 'LLM evaluation', 'Model observability', 'MCP', 'Verifier-driven training', 'Physical AI'],
+		sameAs: [
+			'https://github.com/dunkeln',
+			'https://www.linkedin.com/in/prateek-pravanjan',
+			'https://x.com/_dunkeln',
+		],
+	},
+};
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Prateek Pravanjan's portfolio and technical writing." />
-		<title>dunkeln.github.io — Prateek Pravanjan</title>
+		<SiteHead title="Prateek Pravanjan — Bay Area AI Engineer" description={description} jsonLd={profileJsonLd} />
 	</head>
 	<body class="bg-canvas text-ink antialiased">
 		<a class="skip-link" href="#content">Skip to content</a>

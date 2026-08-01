@@ -30,6 +30,6 @@ const tocHeadings = headings
 	.map((heading, index) => ({ ...heading, html: labels[index] }));
 ---
 
-<PostLayout title={post.data.title} description={post.data.description} date={post.data.date} tags={post.data.tags} headings={tocHeadings}>
+<PostLayout title={post.data.title} description={post.data.description} date={post.data.date} tags={post.data.tags} cover={post.data.cover} headings={tocHeadings}>
 	<Content />
 </PostLayout>

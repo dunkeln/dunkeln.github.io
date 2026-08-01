@@ -1,0 +1,78 @@
+export const projects = [
+	{
+		name: 'procdork',
+		scope: 'Governed ELT + evaluation harness',
+		image: '/assets/work/procdork.avif',
+		alt: 'Procdork interface showing a sourced supplier research session',
+		width: 1280,
+		height: 720,
+		live: 'https://procdork.vercel.app/docs',
+		repo: 'https://github.com/dunkeln/procdork',
+	},
+	{
+		name: 'Bright MCP',
+		scope: 'Agent-oriented MCP and MCP App',
+		image: '/assets/work/bright-mcp.avif',
+		alt: 'Benchmark comparing workflow completion, answer quality, and judge preference',
+		width: 1200,
+		height: 640,
+		repo: 'https://github.com/dunkeln/bright_mcp',
+	},
+	{
+		name: 'Signals',
+		scope: 'Procurement workflow observability',
+		image: '/assets/work/signals.avif',
+		alt: 'Signals procurement coordination map for a simulated supplier workflow',
+		width: 1280,
+		height: 720,
+		live: 'https://signals-ws.vercel.app/acme-base-sandbox',
+		repo: 'https://github.com/dunkeln/signals',
+	},
+	{
+		name: 'Murdock',
+		scope: 'Provenance-first legal review',
+		image: '/assets/work/murdock.avif',
+		alt: 'Murdock case workspace reviewing source documents and extracted issues',
+		width: 1600,
+		height: 1104,
+		repo: 'https://github.com/dunkeln/murdock',
+	},
+	{
+		name: 'DROID Loop',
+		scope: 'Robot failure mining & review',
+		image: '/assets/work/droid-loop.avif',
+		alt: 'DROID Loop interface reviewing a flagged robot manipulation incident',
+		width: 900,
+		height: 628,
+		live: 'https://droid-loop.dunkeln.com',
+		repo: 'https://github.com/dunkeln/droid_loop',
+	},
+	{
+		name: 'mobisim',
+		scope: 'Grounded voice + 3D inspection',
+		image: '/assets/work/mobisim.png',
+		alt: 'A semantically inspectable Audi R8 model rendered by Mobisim',
+		width: 1440,
+		height: 759,
+		live: 'https://mobisim.dunkeln.com',
+		repo: 'https://github.com/dunkeln/mobisim',
+	},
+];
+
+export const skills = [
+	{
+		name: 'premortem',
+		summary: 'Pressure-test risky technical plans before rewrites, migrations, cutovers, or AI-system changes.',
+		install: 'npx skills add https://github.com/dunkeln/skills --skill premortem',
+	},
+	{
+		name: 'postmortem',
+		summary: 'RCA engineering failures into evidence-backed cause chains and fix paths, distilled from production SRE agent workflows.',
+		install: 'npx skills add https://github.com/dunkeln/skills --skill postmortem',
+	},
+	{
+		name: '4x4',
+		summary: 'Stop agents from colluding around the first plausible fix by making four lanes compete under different payoffs.',
+		install: 'npx skills add https://github.com/dunkeln/skills --skill 4x4',
+	},
+];
