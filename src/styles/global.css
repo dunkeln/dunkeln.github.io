@@ -515,6 +515,38 @@
 		font-size: 0.75rem;
 	}
 
+	@media (max-width: 34rem) {
+		.writing-list a {
+			grid-template-areas:
+				"cover time"
+				"cover title"
+				"description description";
+			grid-template-columns: clamp(5.5rem, 25vw, 7rem) minmax(0, 1fr);
+			gap: 0.4rem 1rem;
+		}
+
+		.writing-cover {
+			grid-area: cover;
+		}
+
+		.writing-copy {
+			display: contents;
+		}
+
+		.writing-list time {
+			grid-area: time;
+		}
+
+		.writing-list h2 {
+			grid-area: title;
+		}
+
+		.writing-list p {
+			grid-area: description;
+			margin-block-start: 0.35rem;
+		}
+	}
+
 	@media (min-width: 48rem) {
 		.writing-list {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
