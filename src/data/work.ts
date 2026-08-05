@@ -1,7 +1,7 @@
 export const projects = [
 	{
 		name: 'procdork',
-		scope: 'Governed ELT + evaluation harness',
+		scope: 'Across 24 completed adversarial workflows and 313 MCP calls, the harness still produced grounded answers with no invented supplier scores; 90.1% of input came from cache.',
 		image: '/assets/work/procdork.avif',
 		alt: 'Procdork interface showing a sourced supplier research session',
 		width: 1280,
@@ -11,7 +11,7 @@ export const projects = [
 	},
 	{
 		name: 'Bright MCP',
-		scope: 'Agent-oriented MCP and MCP App',
+		scope: 'An outcome-shaped MCP completed 14 of 15 five-turn workflows, reached 7.59/10 blind quality, and won judge preference 9–4 with two ties.',
 		image: '/assets/work/bright-mcp.avif',
 		alt: 'Benchmark comparing workflow completion, answer quality, and judge preference',
 		width: 1200,
@@ -20,7 +20,7 @@ export const projects = [
 	},
 	{
 		name: 'Signals',
-		scope: 'Procurement workflow observability',
+		scope: 'Turns scattered supplier emails, PDFs, and review clicks into an evidence DAG whose edges preserve status, confidence, and provenance—so missing context stays visible.',
 		image: '/assets/work/signals.avif',
 		alt: 'Signals procurement coordination map for a simulated supplier workflow',
 		width: 1280,
@@ -30,7 +30,7 @@ export const projects = [
 	},
 	{
 		name: 'Murdock',
-		scope: 'Provenance-first legal review',
+		scope: 'One model pass drafts source-linked findings; deterministic code turns them into conflicts, review gates, and durable actions, keeping legal state out of the chat model.',
 		image: '/assets/work/murdock.avif',
 		alt: 'Murdock case workspace reviewing source documents and extracted issues',
 		width: 1600,
@@ -39,7 +39,7 @@ export const projects = [
 	},
 	{
 		name: 'DROID Loop',
-		scope: 'Robot failure mining & review',
+		scope: 'Streams multiview robot episodes through SigLIP, IsolationForest, HDBSCAN, and temporal-jump detection, then compresses anomalous frames into incidents humans can validate for the next training cycle.',
 		image: '/assets/work/droid-loop.avif',
 		alt: 'DROID Loop interface reviewing a flagged robot manipulation incident',
 		width: 900,
@@ -49,7 +49,7 @@ export const projects = [
 	},
 	{
 		name: 'mobisim',
-		scope: 'Grounded voice + 3D inspection',
+		scope: 'Turns a raw GLB into a structural DAG and semantic overlay, grounding voice commands in live scene state while a deterministic boundary applies accepted mutations and rejects unsupported ones.',
 		image: '/assets/work/mobisim.png',
 		alt: 'A semantically inspectable Audi R8 model rendered by Mobisim',
 		width: 1440,
