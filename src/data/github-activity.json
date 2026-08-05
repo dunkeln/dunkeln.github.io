@@ -1,7 +1,12 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-08-05T08:22:19.833Z",
+  "generatedAt": "2026-08-05T13:47:57.726Z",
   "repositories": [
+    {
+      "name": "dunkeln/browseruse_ft",
+      "description": "training an SLM for long horizon browser tasks",
+      "createdAt": "2026-08-05T09:36:41Z"
+    },
     {
       "name": "dunkeln/dunkeln.github.io",
       "description": "portfolio cuz why not 👨‍💻",
@@ -21,11 +26,6 @@
       "name": "fw-ai/cookbook",
       "description": null,
       "createdAt": "2026-07-25T03:39:13Z"
-    },
-    {
-      "name": "tinyfish-io/bigset",
-      "description": null,
-      "createdAt": "2026-07-23T23:50:49Z"
     }
   ]
 }
