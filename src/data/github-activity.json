@@ -1,11 +1,11 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-08-12T07:12:00.484Z",
+  "generatedAt": "2026-08-12T12:51:00.880Z",
   "repositories": [
     {
       "name": "dunkeln/browseruse_ft",
       "description": "training an SLM for long horizon browser tasks",
-      "createdAt": "2026-08-08T10:50:05Z"
+      "createdAt": "2026-08-12T08:43:01Z"
     },
     {
       "name": "dunkeln/dunkeln.github.io",
