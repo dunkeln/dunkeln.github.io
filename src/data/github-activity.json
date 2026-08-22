@@ -1,7 +1,12 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-08-22T12:22:14.944Z",
+  "generatedAt": "2026-08-22T18:17:11.032Z",
   "repositories": [
+    {
+      "name": "itsajchan/bright-data-mcp-with-openai-agents-sdk",
+      "description": null,
+      "createdAt": "2026-08-22T17:42:24Z"
+    },
     {
       "name": "dunkeln/browseruse_ft",
       "description": "training an SLM for long horizon browser tasks",
@@ -21,11 +26,6 @@
       "name": "dunkeln/bud",
       "description": "hackathon",
       "createdAt": "2026-07-29T06:29:20Z"
-    },
-    {
-      "name": "dunkeln/bright_mcp",
-      "description": "Agent-oriented Bright Data capabilities over MCP, built with Bun and the OpenAI Apps SDK",
-      "createdAt": "2026-07-26T08:17:38Z"
     }
   ]
 }
