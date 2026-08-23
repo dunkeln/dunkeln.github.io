@@ -1,7 +1,12 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-08-22T18:17:11.032Z",
+  "generatedAt": "2026-08-23T00:51:40.255Z",
   "repositories": [
+    {
+      "name": "dunkeln/new_drop",
+      "description": "BDD for better quality SLSA",
+      "createdAt": "2026-08-22T23:37:57Z"
+    },
     {
       "name": "itsajchan/bright-data-mcp-with-openai-agents-sdk",
       "description": null,
@@ -21,11 +26,6 @@
       "name": "dunkeln/dunkeln.github.io",
       "description": "portfolio cuz why not 👨‍💻",
       "createdAt": "2026-08-05T01:14:38Z"
-    },
-    {
-      "name": "dunkeln/bud",
-      "description": "hackathon",
-      "createdAt": "2026-07-29T06:29:20Z"
     }
   ]
 }
