@@ -1,0 +1,12 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "dunkeln.github.io machine-readable surface",
+    "version": "1.0.0",
+    "description": "This is a static portfolio and blog. It exposes documents and links, not a mutable API. See /sitemap.xml and /llms.txt for the navigable surface."
+  },
+  "servers": [
+    { "url": "https://dunkeln.github.io" }
+  ],
+  "paths": {}
+}

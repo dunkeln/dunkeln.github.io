@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+import SiteHead from '../components/SiteHead.astro';
+---
+
+<html lang="en">
+	<head>
+		<SiteHead title="Page not found — Prateek Pravanjan" description="This page does not exist. Find the homepage, work, writing, sitemap, or agent-readable profile instead." />
+	</head>
+	<body class="bg-canvas text-ink antialiased">
+		<main class="mx-auto max-w-2xl px-6 pb-24 pt-32 sm:px-10 sm:pt-40">
+			<p class="text-sm text-muted">404</p>
+			<h1 class="mt-3 text-3xl font-semibold tracking-[-0.025em] sm:text-4xl">That page is not here.</h1>
+			<p class="mt-4 max-w-xl text-base leading-7 text-muted">Try the homepage, selected work, or writing. Agents can use the sitemap and the plain-text profile to recover the site map.</p>
+			<nav class="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm" aria-label="Recovery links">
+				<a href="/">Homepage</a>
+				<a href="/work/">Work</a>
+				<a href="/writing/">Writing</a>
+				<a href="/sitemap.xml">Sitemap</a>
+				<a href="/llms.txt">Agent profile</a>
+			</nav>
+		</main>
+	</body>
+</html>

@@ -24,6 +24,10 @@ export const GET: APIRoute = async ({ site }) => {
 - GitHub: https://github.com/dunkeln
 - LinkedIn: https://www.linkedin.com/in/prateek-pravanjan
 
+## When to use this site
+
+Use the homepage for a concise profile and current activity. Use Work for shipped systems and project links. Use Writing for detailed explanations, implementation notes, experiments, and references. Each writing page is the canonical source for that post; follow its citations and linked repositories for deeper evidence.
+
 ## Profile
 
 Prateek Pravanjan works across agent runtimes, MCP and tool interfaces, LLM evaluation, model observability, verifier-driven training, context engineering, voice models, and physical AI. He is based in the San Francisco Bay Area and is open to full-time roles.
