@@ -1,6 +1,6 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-09-18T10:18:59.692Z",
+  "generatedAt": "2026-09-18T15:32:12.811Z",
   "repositories": [
     {
       "name": "dunkeln/dunkeln.github.io",
@@ -21,11 +21,6 @@
       "name": "itsajchan/bright-data-mcp-with-openai-agents-sdk",
       "description": null,
       "createdAt": "2026-08-22T17:42:24Z"
-    },
-    {
-      "name": "dunkeln/browseruse_ft",
-      "description": "training an SLM for long horizon browser tasks",
-      "createdAt": "2026-08-19T08:02:36Z"
     }
   ]
 }
