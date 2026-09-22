@@ -1,6 +1,6 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-09-22T02:38:25.896Z",
+  "generatedAt": "2026-09-22T10:40:45.667Z",
   "repositories": [
     {
       "name": "firecrawl/firecrawl",
@@ -16,11 +16,6 @@
       "name": "truefoundry/trueforge",
       "description": null,
       "createdAt": "2026-08-26T00:14:33Z"
-    },
-    {
-      "name": "dunkeln/new_drop",
-      "description": "BDD for better quality SLSA",
-      "createdAt": "2026-08-22T23:37:57Z"
     }
   ]
 }
