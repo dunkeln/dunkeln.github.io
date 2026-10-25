@@ -1,43 +1,8 @@
 {
   "username": "dunkeln",
   "totalContributions": 825,
-  "generatedAt": "2026-10-25T02:32:21.632Z",
+  "generatedAt": "2026-10-25T10:28:12.954Z",
   "days": [
-    {
-      "date": "2025-10-19",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2025-10-20",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2025-10-21",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2025-10-22",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2025-10-23",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2025-10-24",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2025-10-25",
-      "count": 0,
-      "level": "NONE"
-    },
     {
       "date": "2025-10-26",
       "count": 0,
@@ -1855,6 +1820,11 @@
     },
     {
       "date": "2026-10-24",
+      "count": 0,
+      "level": "NONE"
+    },
+    {
+      "date": "2026-10-25",
       "count": 0,
       "level": "NONE"
     }
