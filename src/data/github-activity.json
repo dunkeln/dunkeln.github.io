@@ -1,7 +1,12 @@
 {
   "username": "dunkeln",
-  "generatedAt": "2026-11-17T01:21:14.645Z",
+  "generatedAt": "2026-11-17T15:16:33.692Z",
   "repositories": [
+    {
+      "name": "dunkeln/dunkeln.github.io",
+      "description": "portfolio cuz why not 👨‍💻",
+      "createdAt": "2026-11-15T20:56:02Z"
+    },
     {
       "name": "dunkeln/chorus",
       "description": "Environments for observing how AI agents work and interact, and exploring speculative preparation for multi-agent systems.",
