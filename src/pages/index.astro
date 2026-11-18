@@ -5,9 +5,9 @@ import SiteHead from '../components/SiteHead.astro';
 import activity from '../data/github-activity.json';
 import contributions from '../data/github-contributions.json';
 
-const days = contributions.days.slice(-224);
-const weeks = Array.from({ length: 32 }, (_, index) => days.slice(index * 7, index * 7 + 7));
-const recentContributionCount = days.reduce((total, day) => total + day.count, 0);
+const firstWeekday = new Date(contributions.days[0].date).getUTCDay();
+const calendarDays = [...Array<null>(firstWeekday).fill(null), ...contributions.days];
+const contributionSummary = `${contributions.totalContributions.toLocaleString('en-US')} contributions in the last year`;
 const recentRepositories = activity.repositories.slice(0, 5);
 const relativeTime = new Intl.RelativeTimeFormat('en', { numeric: 'always', style: 'narrow' });
 const formatRelativeTime = (iso: string) => {
@@ -143,28 +143,22 @@ const profileJsonLd = {
 			<section class="contribution-section" aria-labelledby="github-activity">
 				<div class="contribution-header">
 					<h2 id="github-activity">GitHub activity</h2>
-					<span>
-						{recentContributionCount} contributions<span class="contribution-period"> · past 8 months</span>
-					</span>
+					<span>{contributionSummary}</span>
 				</div>
 				<a
 					class="contribution-link"
 					href={`https://github.com/${contributions.username}`}
 					target="_blank"
 					rel="noreferrer"
-					aria-label={`View ${contributions.username} on GitHub — ${recentContributionCount} contributions in the past 8 months`}
+					aria-label={`View ${contributions.username} on GitHub — ${contributionSummary}`}
 				>
 					<div class="contribution-grid" aria-hidden="true">
-						{weeks.map((week) => (
-							<div class="contribution-week">
-								{week.map((day) => (
-									<span
-										class="contribution-cell"
-										data-level={day.level}
-										title={`${day.date} · ${day.count} contribution${day.count === 1 ? '' : 's'}`}
-									></span>
-								))}
-							</div>
+						{calendarDays.map((day) => (
+							<span
+								class="contribution-cell"
+								data-level={day?.level}
+								title={day ? `${day.date} · ${day.count} contribution${day.count === 1 ? '' : 's'}` : undefined}
+							></span>
 						))}
 					</div>
 				</a>

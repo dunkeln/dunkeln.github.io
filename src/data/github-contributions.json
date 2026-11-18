@@ -1,7 +1,7 @@
 {
   "username": "dunkeln",
-  "totalContributions": 834,
-  "generatedAt": "2026-11-18T14:52:24.457Z",
+  "totalContributions": 1584,
+  "generatedAt": "2026-11-18T16:02:54.224Z",
   "days": [
     {
       "date": "2025-11-16",
@@ -550,12 +550,12 @@
     },
     {
       "date": "2026-03-05",
-      "count": 3,
+      "count": 2,
       "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-03-06",
-      "count": 3,
+      "count": 4,
       "level": "FIRST_QUARTILE"
     },
     {
@@ -1000,12 +1000,12 @@
     },
     {
       "date": "2026-06-03",
-      "count": 8,
+      "count": 7,
       "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-06-04",
-      "count": 10,
+      "count": 11,
       "level": "FIRST_QUARTILE"
     },
     {
@@ -1070,12 +1070,12 @@
     },
     {
       "date": "2026-06-17",
-      "count": 2,
+      "count": 1,
       "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-06-18",
-      "count": 1,
+      "count": 2,
       "level": "FIRST_QUARTILE"
     },
     {
@@ -1181,7 +1181,7 @@
     {
       "date": "2026-07-09",
       "count": 23,
-      "level": "THIRD_QUARTILE"
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-07-10",
@@ -1230,12 +1230,12 @@
     },
     {
       "date": "2026-07-19",
-      "count": 13,
+      "count": 12,
       "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-07-20",
-      "count": 27,
+      "count": 28,
       "level": "THIRD_QUARTILE"
     },
     {
@@ -1520,28 +1520,28 @@
     },
     {
       "date": "2026-09-15",
-      "count": 0,
-      "level": "NONE"
+      "count": 5,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-09-16",
-      "count": 0,
-      "level": "NONE"
+      "count": 19,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-09-17",
-      "count": 0,
-      "level": "NONE"
+      "count": 9,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-09-18",
-      "count": 0,
-      "level": "NONE"
+      "count": 29,
+      "level": "THIRD_QUARTILE"
     },
     {
       "date": "2026-09-19",
-      "count": 0,
-      "level": "NONE"
+      "count": 5,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-09-20",
@@ -1550,133 +1550,133 @@
     },
     {
       "date": "2026-09-21",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2026-09-22",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2026-09-23",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2026-09-24",
-      "count": 0,
-      "level": "NONE"
-    },
-    {
-      "date": "2026-09-25",
-      "count": 8,
+      "count": 7,
       "level": "FIRST_QUARTILE"
     },
     {
+      "date": "2026-09-22",
+      "count": 9,
+      "level": "FIRST_QUARTILE"
+    },
+    {
+      "date": "2026-09-23",
+      "count": 27,
+      "level": "THIRD_QUARTILE"
+    },
+    {
+      "date": "2026-09-24",
+      "count": 67,
+      "level": "FOURTH_QUARTILE"
+    },
+    {
+      "date": "2026-09-25",
+      "count": 27,
+      "level": "THIRD_QUARTILE"
+    },
+    {
       "date": "2026-09-26",
-      "count": 15,
+      "count": 17,
       "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-09-27",
-      "count": 40,
+      "count": 51,
       "level": "FOURTH_QUARTILE"
     },
     {
       "date": "2026-09-28",
-      "count": 2,
+      "count": 10,
       "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-09-29",
-      "count": 0,
-      "level": "NONE"
+      "count": 15,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-09-30",
-      "count": 0,
-      "level": "NONE"
+      "count": 7,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-01",
-      "count": 0,
-      "level": "NONE"
+      "count": 13,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-10-02",
-      "count": 0,
-      "level": "NONE"
+      "count": 12,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-10-03",
-      "count": 0,
-      "level": "NONE"
+      "count": 10,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-04",
-      "count": 0,
-      "level": "NONE"
+      "count": 6,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-05",
-      "count": 0,
-      "level": "NONE"
+      "count": 7,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-06",
-      "count": 0,
-      "level": "NONE"
+      "count": 15,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-10-07",
-      "count": 0,
-      "level": "NONE"
+      "count": 15,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-10-08",
-      "count": 0,
-      "level": "NONE"
+      "count": 6,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-09",
-      "count": 0,
-      "level": "NONE"
+      "count": 3,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-10",
-      "count": 0,
-      "level": "NONE"
+      "count": 2,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-11",
-      "count": 0,
-      "level": "NONE"
+      "count": 7,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-12",
-      "count": 0,
-      "level": "NONE"
+      "count": 29,
+      "level": "THIRD_QUARTILE"
     },
     {
       "date": "2026-10-13",
-      "count": 0,
-      "level": "NONE"
+      "count": 11,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-14",
-      "count": 0,
-      "level": "NONE"
+      "count": 38,
+      "level": "FOURTH_QUARTILE"
     },
     {
       "date": "2026-10-15",
-      "count": 0,
-      "level": "NONE"
+      "count": 47,
+      "level": "FOURTH_QUARTILE"
     },
     {
       "date": "2026-10-16",
-      "count": 0,
-      "level": "NONE"
+      "count": 3,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-17",
@@ -1685,33 +1685,33 @@
     },
     {
       "date": "2026-10-18",
-      "count": 0,
-      "level": "NONE"
+      "count": 11,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-19",
-      "count": 0,
-      "level": "NONE"
+      "count": 17,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-10-20",
-      "count": 0,
-      "level": "NONE"
+      "count": 3,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-21",
-      "count": 0,
-      "level": "NONE"
+      "count": 31,
+      "level": "THIRD_QUARTILE"
     },
     {
       "date": "2026-10-22",
-      "count": 0,
-      "level": "NONE"
+      "count": 43,
+      "level": "FOURTH_QUARTILE"
     },
     {
       "date": "2026-10-23",
-      "count": 0,
-      "level": "NONE"
+      "count": 7,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-24",
@@ -1720,33 +1720,33 @@
     },
     {
       "date": "2026-10-25",
-      "count": 0,
-      "level": "NONE"
+      "count": 4,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-26",
-      "count": 0,
-      "level": "NONE"
+      "count": 9,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-27",
-      "count": 0,
-      "level": "NONE"
+      "count": 2,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-28",
-      "count": 0,
-      "level": "NONE"
+      "count": 1,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-29",
-      "count": 0,
-      "level": "NONE"
+      "count": 2,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-30",
-      "count": 0,
-      "level": "NONE"
+      "count": 3,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-10-31",
@@ -1760,33 +1760,33 @@
     },
     {
       "date": "2026-11-02",
-      "count": 1,
+      "count": 11,
       "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-03",
-      "count": 0,
-      "level": "NONE"
+      "count": 9,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-04",
-      "count": 0,
-      "level": "NONE"
+      "count": 6,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-05",
-      "count": 0,
-      "level": "NONE"
+      "count": 9,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-06",
-      "count": 0,
-      "level": "NONE"
+      "count": 11,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-07",
-      "count": 0,
-      "level": "NONE"
+      "count": 2,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-08",
@@ -1795,53 +1795,53 @@
     },
     {
       "date": "2026-11-09",
-      "count": 0,
-      "level": "NONE"
+      "count": 12,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-11-10",
-      "count": 0,
-      "level": "NONE"
+      "count": 12,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-11-11",
-      "count": 0,
-      "level": "NONE"
+      "count": 22,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-11-12",
-      "count": 4,
-      "level": "FIRST_QUARTILE"
+      "count": 16,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-11-13",
-      "count": 0,
-      "level": "NONE"
+      "count": 15,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-11-14",
-      "count": 0,
-      "level": "NONE"
+      "count": 2,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-15",
-      "count": 1,
+      "count": 5,
       "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-16",
-      "count": 0,
-      "level": "NONE"
+      "count": 11,
+      "level": "FIRST_QUARTILE"
     },
     {
       "date": "2026-11-17",
-      "count": 0,
-      "level": "NONE"
+      "count": 14,
+      "level": "SECOND_QUARTILE"
     },
     {
       "date": "2026-11-18",
-      "count": 0,
-      "level": "NONE"
+      "count": 3,
+      "level": "FIRST_QUARTILE"
     }
   ]
 }

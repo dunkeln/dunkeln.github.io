@@ -26,7 +26,7 @@ jobs:
         env:
           GH_GRAPHQL_TOKEN: ${{ secrets.GH_GRAPHQL_TOKEN }}
           GH_USERNAME: dunkeln
-        run: node scripts/generate-github-heatmap.mjs
+        run: bun scripts/generate-github-heatmap.mjs
       - name: Commit changed data
         run: |
           git diff --quiet && exit 0
