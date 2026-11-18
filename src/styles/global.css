@@ -1049,19 +1049,19 @@
 	}
 
 	.contribution-cell[data-level="FIRST_QUARTILE"] {
-		background: #0e4429;
+		background: oklch(1 0 0 / 0.16);
 	}
 
 	.contribution-cell[data-level="SECOND_QUARTILE"] {
-		background: #006d32;
+		background: oklch(1 0 0 / 0.3);
 	}
 
 	.contribution-cell[data-level="THIRD_QUARTILE"] {
-		background: #26a641;
+		background: oklch(1 0 0 / 0.5);
 	}
 
 	.contribution-cell[data-level="FOURTH_QUARTILE"] {
-		background: #39d353;
+		background: oklch(1 0 0 / 0.78);
 	}
 
 	.recent-section {
